@@ -118,8 +118,7 @@ return (
 <h2 className="text-center text-white text-[48px] mb-16" style={{ fontWeight: 700 }}>
 Мои работы
 </h2>
-code
-Code
+
 {/* Фильтры */}
     <div className="flex flex-wrap justify-center gap-4 mb-16">
       {categories.map((category) => (

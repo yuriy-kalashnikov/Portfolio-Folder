@@ -49,8 +49,7 @@ return (
 <h2 className="text-center text-white text-[48px] mb-24" style={{ fontWeight: 700 }}>
 Опыт работы
 </h2>
-code
-Code
+
 <div className="relative">
       {/* Вертикальная синяя линия */}
       <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#007BFF] transform -translate-x-1/2 hidden lg:block" />

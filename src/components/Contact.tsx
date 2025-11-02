@@ -16,8 +16,7 @@ return (
 Готов обсудить ваш проект. Свяжитесь со мной удобным способом.
 </p>
 </div>
-code
-Code
+
 {/* --- НАЧАЛО ФОРМЫ --- */}
     <form name="contact" method="POST" data-netlify="true" className="space-y-6 mb-16">
       {/* Эта строка обязательна для Netlify! */}

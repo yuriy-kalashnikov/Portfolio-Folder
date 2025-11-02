@@ -32,8 +32,7 @@ return (
 <h2 className="text-center text-white text-[48px] mb-20" style={{ fontWeight: 700 }}>
 Чем я могу быть полезен
 </h2>
-code
-Code
+
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {services.map((service, index) => (
         <div

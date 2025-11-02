@@ -21,8 +21,7 @@ return (
 <h2 className="text-center text-white text-[48px] mb-20" style={{ fontWeight: 700 }}>
 Обо мне
 </h2>
-code
-Code
+
 {/* Секция "Обо мне" - Две колонки */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
       {/* Левая колонка - Фотография */}
