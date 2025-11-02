@@ -20,8 +20,8 @@ export function Hero() {
         <div className="order-1 lg:order-2 space-y-10 text-left">
           <div className="space-y-8">
             <h1 
-              className="text-white text-[60px]" 
-              style={{ fontWeight: 700, lineHeight: '1' }}
+              className="text-white text-[72px]" 
+              style={{ fontWeight: 700, lineHeight: '1.2' }}
             >
               Весь контент в одних руках
             </h1>
