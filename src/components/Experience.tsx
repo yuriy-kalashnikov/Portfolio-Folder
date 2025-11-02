@@ -47,13 +47,16 @@ export function Experience() {
   return (
     <section className="px-8 py-24 bg-[#1F1F1F]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-center text-white text-[48px] mb-24" style={{ fontWeight: 700 }}>
+        <h2 
+          className="text-center text-white text-[60px] mb-24" 
+          style={{ fontWeight: 700, lineHeight: '1' }}
+        >
           Опыт работы
         </h2>
 
         <div className="relative">
-          {/* Вертикальная синяя линия */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#007BFF] transform -translate-x-1/2 hidden lg:block" />
+          {/* Вертикальная синяя линия (адаптивная) */}
+          <div className="absolute left-1.5 top-0 bottom-0 w-0.5 bg-[#007BFF] transform lg:left-1/2 lg:-translate-x-1/2" />
 
           <div className="space-y-16">
             {experiences.map((exp, index) => (
@@ -63,16 +66,16 @@ export function Experience() {
                   exp.position === "left"
                     ? "lg:flex-row-reverse"
                     : "lg:flex-row"
-                } flex-col`}
+                } flex-col lg:items-center`}
               >
-                {/* Синий круглый маркер на линии */}
-                <div className="absolute left-1/2 top-10 w-3 h-3 bg-[#007BFF] rounded-full transform -translate-x-1/2 border-4 border-[#1F1F1F] hidden lg:block z-10" />
+                {/* Синий круглый маркер (адаптивный) */}
+                <div className="absolute left-0 top-2 w-3 h-3 bg-[#007BFF] rounded-full transform border-4 border-[#1F1F1F] z-10 lg:left-1/2 lg:-translate-x-1/2 lg:top-1/2" />
 
-                {/* Пустое пространство для другой стороны */}
+                {/* Пустое пространство (только для больших экранов) */}
                 <div className="w-full lg:w-1/2 hidden lg:block" />
 
-                {/* Карточка опыта */}
-                <div className="w-full lg:w-1/2 lg:px-16">
+                {/* Карточка опыта (адаптивная) */}
+                <div className="w-full lg:w-1/2 pl-8 lg:px-16">
                   <div className="bg-[#2C2C2E] rounded-[16px] p-8 space-y-4 text-left hover:bg-[#3A3A3C] transition-colors">
                     <h3 className="text-white text-[24px]" style={{ fontWeight: 700 }}>
                       {exp.title}

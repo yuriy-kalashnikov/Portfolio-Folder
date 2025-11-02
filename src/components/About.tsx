@@ -22,7 +22,10 @@ export function About() {
   return (
     <section className="px-8 py-24 bg-[#1F1F1F]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-white text-[48px] mb-20" style={{ fontWeight: 700 }}>
+        <h2 
+          className="text-center text-white text-[60px] mb-20" 
+          style={{ fontWeight: 700, lineHeight: '1' }}
+        >
           Обо мне
         </h2>
 

@@ -28,7 +28,7 @@ const portfolioItems = [
   },
   {
     id: 3,
-    title: "Маскот, как уникальный голос бренда",
+    title: "Маскот как уникальный голос бренда",
     description:
       "Разработал и внедрил в контент-стратегию уникального бренд-персонажа — Мастера Барсукова. Еженедельно в постах он объяснял сложные технические детали и представлял новые проекты. Это позволило повысить узнаваемость бренда, что подтвердила прямая обратная связь от клиентов в шоуруме.",
     image: "/images/barsuk.jpg",
@@ -120,7 +120,7 @@ export function Portfolio() {
   return (
     <section className="px-8 py-24">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-white text-[48px] mb-16" style={{ fontWeight: 700 }}>
+        <h2 className="text-center text-white text-[60px] mb-16" style={{ fontWeight: 700, lineHeight: '1' }}>
           Мои работы
         </h2>
 
@@ -141,14 +141,14 @@ export function Portfolio() {
           ))}
         </div>
 
-        {/* Сетка работ с выравниванием высоты */}
+        {/* Сетка работ */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item) => (
             <div
               key={item.id}
               className="overflow-hidden hover:transform hover:scale-105 transition-transform flex flex-col"
             >
-              {/* Верхняя часть - изображение с соотношением 4:3 */}
+              {/* Верхняя часть - изображение */}
               <div className="aspect-[4/3] relative rounded-t-[16px] overflow-hidden">
                 <ImageWithFallback
                   src={item.image}
@@ -157,14 +157,16 @@ export function Portfolio() {
                 />
               </div>
               
-              {/* Нижняя часть - текст с фиксированной высотой */}
-              <div className="bg-[#2C2C2E] hover:bg-[#3A3A3C] transition-colors p-6 space-y-4 rounded-b-[16px] flex flex-col h-[400px]">
+              {/* Нижняя часть - текст (гибкая высота) */}
+              <div className="bg-[#2C2C2E] hover:bg-[#3A3A3C] transition-colors p-6 space-y-4 rounded-b-[16px] flex flex-col flex-1">
                 <h3 className="text-white text-[20px]" style={{ fontWeight: 700 }}>
                   {item.title}
                 </h3>
-                <p className="text-white leading-relaxed text-[16px] flex-1 overflow-auto" style={{ fontWeight: 400 }}>
+                <p className="text-white leading-relaxed text-[16px]" style={{ fontWeight: 400 }}>
                   {item.description}
                 </p>
+                {/* Распорка, которая прижимает ссылку к низу */}
+                <div className="flex-grow" />
                 {item.linkUrl && item.linkIcon && (
                   <a
                     href={item.linkUrl}

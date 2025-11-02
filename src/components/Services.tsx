@@ -31,15 +31,18 @@ export function Services() {
   return (
     <section id="services" className="px-8 py-24">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-white text-[48px] mb-20" style={{ fontWeight: 700 }}>
+        <h2 
+          className="text-center text-white text-[60px]" 
+          style={{ fontWeight: 700, lineHeight: '1' }}
+        >
           Чем я могу быть полезен
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-[#2C2C2E] rounded-[16px] p-8 space-y-6 hover:bg-[#3A3A3C] transition-colors text-left"
+              className="bg-[#2C2C2E] rounded-[16px] p-8 space-y-6 hover:bg-[#3A3A3C] transition-colors text-left flex flex-col"
             >
               <div className="w-20 h-20 rounded-full bg-[#007BFF] flex items-center justify-center">
                 <service.icon className="w-10 h-10 text-white" />

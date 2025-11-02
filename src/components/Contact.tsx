@@ -10,7 +10,10 @@ export function Contact() {
       <div className="max-w-2xl mx-auto">
         {/* Текстовые элементы */}
         <div className="text-center mb-12 space-y-4">
-          <h2 className="text-white text-[48px]" style={{ fontWeight: 700 }}>
+          <h2 
+            className="text-white text-[60px]" 
+            style={{ fontWeight: 700, lineHeight: '1' }}
+          >
             Давайте работать вместе
           </h2>
           <p className="text-white text-[20px]" style={{ fontWeight: 400 }}>
@@ -73,14 +76,14 @@ export function Contact() {
         {/* Иконки для связи */}
         <div className="flex justify-center gap-6">
           <a
-            href="tel:+79254049311" // НЕ ЗАБУДЬТЕ ВСТАВИТЬ НОМЕР
+            href="tel:+79254049311"
             className="w-16 h-16 rounded-full bg-[#2C2C2E] flex items-center justify-center hover:bg-[#3A3A3C] transition-colors group"
             aria-label="Телефон"
           >
             <Phone className="w-7 h-7 text-white" />
           </a>
           <a
-            href="https://t.me/KalashnikovYuriy" // НЕ ЗАБУДЬТЕ ВСТАВИТЬ НИКНЕЙМ
+            href="https://t.me/KalashnikovYuriy"
             target="_blank"
             rel="noopener noreferrer"
             className="w-16 h-16 rounded-full bg-[#2C2C2E] flex items-center justify-center hover:bg-[#3A3A3C] transition-colors group"
@@ -89,7 +92,7 @@ export function Contact() {
             <TelegramIcon className="w-7 h-7 text-white" />
           </a>
           <a
-            href="https://wa.me/+79254049311" // НЕ ЗАБУДЬТЕ ВСТАВИТЬ НОМЕР
+            href="https://wa.me/+79254049311"
             target="_blank"
             rel="noopener noreferrer"
             className="w-16 h-16 rounded-full bg-[#2C2C2E] flex items-center justify-center hover:bg-[#3A3A3C] transition-colors group"
