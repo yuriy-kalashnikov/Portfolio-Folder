@@ -1,60 +1,57 @@
-import { Smartphone, Video, Palette, BrainCircuit } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Button } from "./ui/button";
 
-const services = [
-  {
-    icon: Smartphone,
-    title: "SMM и Стратегия",
-    description:
-      "Разрабатываю SMM-стратегию и контент-план на основе глубокого анализа вашей аудитории. Такой подход позволяет не просто увеличивать охваты, а создавать виральный контент, который привлекает клиентов",
-  },
-  {
-    icon: Video,
-    title: "Видеопродакшн",
-    description:
-      "Провожу съёмки на профессиональную камеру, используя полный комплект света и звукового оборудования. Это гарантирует высокое качество картинки и чистый звук в каждом видео",
-  },
-  {
-    icon: Palette,
-    title: "Дизайн и визуал",
-    description:
-      "Разрабатываю визуальный стиль для вашего бренда. Владею всем пакетом Adobe: монтирую видео в Premiere Pro, анимирую графику в After Effects и воплощаю любые креативные идеи для постов в Photoshop",
-  },
-  {
-    icon: BrainCircuit,
-    title: "AI-инструменты",
-    description:
-      "Использую нейросети как инструмент для анализа рынка и оптимизации рутинных задач. Это позволяет экономить время и находить больше сильных, неочевидных идей для вашего контента",
-  },
-];
-
-export function Services() {
+export function Hero() {
   return (
-    <section id="services" className="px-8 py-24">
-      <div className="max-w-7xl mx-auto">
-        <h2 
-          className="text-center text-white text-[60px]" 
-          style={{ fontWeight: 700, lineHeight: '1' }}
-        >
-          Чем я могу быть полезен
-        </h2>
+    <section className="min-h-screen flex items-center px-8 py-20">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Левая колонка - Фотография */}
+        <div className="order-2 lg:order-1">
+          <div className="rounded-[24px] overflow-hidden aspect-[4/5] bg-[#007BFF]/20">
+            <ImageWithFallback
+              src="/images/main.jpg"
+              alt="Портфолио"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-[#2C2C2E] rounded-[16px] p-8 space-y-6 hover:bg-[#3A3A3C] transition-colors text-left flex flex-col"
+        {/* Правая колонка - Текст и кнопки */}
+        <div className="order-1 lg:order-2 space-y-10 text-left">
+          <div className="space-y-8">
+            <h1 
+              className="text-white text-[60px]" 
+              style={{ fontWeight: 700, lineHeight: '1' }}
             >
-              <div className="w-20 h-20 rounded-full bg-[#007BFF] flex items-center justify-center">
-                <service.icon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-white text-[22px]" style={{ fontWeight: 700 }}>
-                {service.title}
-              </h3>
-              <p className="text-white text-[16px] leading-relaxed" style={{ fontWeight: 400 }}>
-                {service.description}
-              </p>
-            </div>
-          ))}
+              Весь контент в одних руках
+            </h1>
+            <p className="text-white text-[20px] leading-relaxed" style={{ fontWeight: 400 }}>
+              Продумываю концепцию, профессионально снимаю и монтирую видео, а затем публикую его в ваших соцсетях
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            {/* Второстепенная кнопка */}
+            <Button
+              variant="outline"
+              className="border-[2px] border-[#007BFF] text-[#007BFF] bg-transparent hover:bg-[#007BFF] hover:text-white rounded-[12px] px-8 py-6 transition-all"
+              onClick={() => {
+                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Мои навыки ↓
+            </Button>
+            
+            {/* Основная кнопка */}
+            <Button
+              className="bg-[#007BFF] hover:bg-[#0062CC] text-white rounded-[12px] px-8 py-6 transition-all"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Связаться со мной
+            </Button>
+          </div>
         </div>
       </div>
     </section>
